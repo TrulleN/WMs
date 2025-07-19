@@ -1,0 +1,33 @@
+window {
+	font-size: 32px;
+	font: Tinos Nerd Font;
+	background-color: rgba(43, 48, 59, 0.95);
+	color: #ffffff;
+	margin: 1px;
+	border: 2px solid #de2525;
+}
+
+#entry:selected {
+	background-color: #de2525;	
+	color: #de2525:
+}
+
+
+#text:selected {
+	
+}
+
+#input{
+	background-color: transparent;
+	border: 0px;
+	color: #ffffff;
+}
+#input:selected {
+	border: 0px #de2525;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
