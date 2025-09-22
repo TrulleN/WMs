@@ -1,0 +1,155 @@
+/* ==========================================================
+   USERCHROME.CSS – Waterfox/Firefox UI-anpassning
+   Funktioner:
+   - Auto-hide navbar (syns bara vid hover)
+   - Kompakta tabs med mörk bakgrund
+   - Rödfärgad vald tab, ljus text på o-valda
+   - Ingen glipa ovanför eller under tabs
+   - Ingen "ny flik"-knapp eller tab-separatorer
+   ========================================================== */
+
+/* ---------------------
+   AUTOHIDE NAVIGATION BAR
+---------------------- */
+
+#nav-bar {
+  max-height: 0px !important;
+  min-height: 0px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #1d1f21 !important;
+  pointer-events: none !important;
+  border: none !important;
+}
+
+#nav-bar > * {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+#navigator-toolbox:hover > #nav-bar {
+  max-height: 0px !important;
+  min-height: 0px !important;
+  pointer-events: auto !important;
+}
+
+#navigator-toolbox:hover > #nav-bar > * {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: auto !important;
+}
+
+/* ---------------------
+   TA BORT GLIPOR OVANFÖR & UNDER TABS
+---------------------- */
+
+#navigator-toolbox,
+#titlebar,
+#TabsToolbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#TabsToolbar::after {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#tabbrowser-tabs,
+#tabbrowser-arrowscrollbox,
+#tabbrowser-tabpanels {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  border: none !important;
+}
+
+#browser,
+.browserContainer,
+#appcontent {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+
+/* ---------------------
+   TABS
+---------------------- */
+
+#TabsToolbar {
+  background-color: #1d1f21 !important;
+  min-height: 18px !important;
+  max-height: 18px !important;
+}
+
+.tabbrowser-tab {
+  min-height: 26px !important;
+  max-height: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #be4141 !important;
+  border: none !important;
+}
+
+.tab-stack > .tab-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  height: 100% !important;
+  min-height: 16px !important;
+  padding: 0 6px !important;
+  background-color: #be4141 !important;
+  border: 0 !important;
+}
+
+.tab-text {
+  display: flex !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  color: #dddddd !important;
+  background-color: #be3131 !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) .tab-text {
+  color: #de4141 !important;
+  background-color: #1d1f21 !important;
+
+}
+
+.tabbrowser-tab:not([selected="true"]) .tab-content{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  height: 100% !important;
+  min-height: 16px !important;
+  padding: 0 6px !important;
+  background-color: #1d1f21 !important;
+  border: 0 !important;
+
+}
+
+
+.tab-icon-image {
+  width: 12px !important;
+  height: 12px !important;
+  margin-inline-end: 4px !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  display: none !important;
+}
+
+#tabs-newtab-button {
+  display: none !important;
+}
