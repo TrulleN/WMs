@@ -13,33 +13,34 @@
 ---------------------- */
 
 #nav-bar {
-  max-height: 0px !important;
-  min-height: 0px !important;
-  overflow: hidden !important;
+  max-height: 1px !important;
+  min-height: 1px !important;
+  overflow: visible !important;
   padding: 0 !important;
   margin: 0 !important;
-  background-color: #1d1f21 !important;
+  background-color: #1a1a1a !important;
   pointer-events: none !important;
   border: none !important;
 }
 
 #nav-bar > * {
   opacity: 0 !important;
-  visibility: hidden !important;
-  height: 0 !important;
+  visibility: visible !important;
+  height: 1 !important;
 }
 
-#navigator-toolbox:hover > #nav-bar {
-  max-height: 0px !important;
-  min-height: 0px !important;
-  pointer-events: auto !important;
-}
-
-#navigator-toolbox:hover > #nav-bar > * {
+/* Göm själva inmatningsfältet men lämna knapparna kvar */
+#urlbar {
   opacity: 0 !important;
-  visibility: hidden !important;
-  height: auto !important;
+  pointer-events: none !important; /* så att du inte klickar i det av misstag */
 }
+
+/* Om du även vill ta bort den lilla kantlinjen */
+#urlbar-background {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 
 /* ---------------------
    TA BORT GLIPOR OVANFÖR & UNDER TABS
